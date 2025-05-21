@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Commande Coque Stone Island</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+  body {
+    margin: 0; padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: white;
+    transition: background-color 0.8s ease;
+  }
+  header {
+    position: relative;
+    background: #222;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
+    color: #e3b04b;
+  }
+  .snap-cloud {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(135deg, #fffc00, #f7e600);
+    color: #000;
+    font-weight: 700;
+    padding: 12px 25px;
+    border-radius: 40px;
+    box-shadow: 0 0 20px #fff500aa;
+    font-family: 'Segoe UI Emoji', 'Arial', sans-serif;
+    cursor: default;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1000;
+    filter: drop-shadow(0 0 5px #fff900);
+  }
+  .snap-cloud svg {
+    width: 28px;
+    height: 28px;
+  }
+  main {
+    max-width: 1000px;
+    margin: 90px auto 40px;
+    background: rgba(30, 30, 30, 0.85);
+    padding: 25px 35px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px #e3b04baa;
+  }
+  .coques {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .coque {
+    cursor: pointer;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #e3b04b;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    width: 150px;
+    border: 3px solid transparent;
+    background: #222;
+  }
+  .coque.selected {
+    border-color: #e3b04b;
+    transform: scale(1.1);
+  }
+  .coque img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+  .coque p {
+    text-align: center;
+    margin: 8px 0;
+    font-weight: 600;
+  }
+  form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  label {
+    font-weight: 700;
+    font-size: 1.1em;
+  }
+  select, input[type="text"], input[type="email"] {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1em;
+  }
+  button {
+    background: #e3b04b;
+    border: none;
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 1.2em;
+    font-weight: 700;
+    cursor: pointer;
+    color: black;
+    transition: background 0.3s ease;
+  }
+  button:hover {
+    background: #b48e30;
+  }
+  .contact-info {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 1.2em;
+  }
+  .contact-info a {
+    color: #e3b04b;
+    text-decoration: none;
+    font-weight: 700;
+  }
+</style>
+</head>
+<body>
+
+<header>Commande Coque Stone Island</header>
+
+<div class="snap-cloud" title="Snap: matteo.cany12">
+  <!-- Logo Snap stylisé -->
+  <svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 2C7.031 2 3 7.523 3 12.5S7.031 23 12 23s9-5.523 9-10.5S16.969 2 12 2z" />
+    <path d="M8 11c.6 2 2 2 4 2s3.4 0 4-2" />
+    <path d="M12 7v7" />
+  </svg>
+  <span>matteo.cany12</span>
+</div>
+
+<main>
+  <div class="coques" id="coques">
+    <div class="coque" data-name="Stone Island Silver" data-color="#A3A3A3">
+      <img src="https://thecaseisland.com/cdn/shop/products/stone-island-case-grey-1_800x.jpg?v=1669378163" alt="Stone Island Silver" />
+      <p>Stone Island Silver</p>
+    </div>
+    <div class="coque" data-name="Stone Island Gris" data-color="#6E6E6E">
+      <img src="https://thecaseisland.com/cdn/shop/products/stone-island-case-grey-2_800x.jpg?v=1669378163" alt="Stone Island Gris" />
+      <p>Stone Island Gris</p>
+    </div>
+    <div class="coque" data-name="Stone Island Rose" data-color="#D37787">
+      <img src="https://cdn.shopify.com/s/files/1/0055/3386/6052/products/STO2133ACOS38_1024x1024.jpg?v=1681245018" alt="Stone Island Rose" />
+      <p>Stone Island Rose</p>
+    </div>
+    <div class="coque" data-name="Stone Island Bleu" data-color="#3B5998">
+      <img src="https://cdn.shopify.com/s/files/1/0055/3386/6052/products/STO2133ACOB30_1024x1024.jpg?v=1681245022" alt="Stone Island Bleu" />
+      <p>Stone Island Bleu</p>
+    </div>
+    <div class="coque" data-name="Stone Island Blanc" data-color="#F2F2F2">
+      <img src="https://cdn.shopify.com/s/files/1/0055/3386/6052/products/STO2133ACOW01_1024x1024.jpg?v=1681245026" alt="Stone Island Blanc" />
+      <p>Stone Island Blanc</p>
+    </div>
+    <div class="coque" data-name="Stone Island Multicolore" data-color="#8B4513">
+      <img src="https://cdn.shopify.com/s/files/1/0055/3386/6052/products/STO2133ACOMU_1024x1024.jpg?v=1681245023" alt="Stone Island Multicolore" />
+      <p>Stone Island Multicolore</p>
+    </div>
+    <div class="coque" data-name="Stone Island Argentée" data-color="#C0C0C0">
+      <img src="https://cdn.shopify.com/s/files/1/0055/3386/6052/products/STO2133ACOS38_1024x1024.jpg?v=1681245018" alt="Stone Island Argentée" />
+      <p>Stone Island Argentée</p>
+    </div>
+  </div>
+
+  <form id="orderForm">
+    <label for="phoneModel">Choisissez votre modèle d'iPhone :</label>
+    <select id="phoneModel" name="phoneModel" required>
+      <option value="" disabled selected>-- Sélectionnez --</option>
+      <option value="iPhone 11">iPhone 11</option>
+      <option value="iPhone 12">iPhone 12</option>
+      <option value="iPhone 13">iPhone 13</option>
+      <option value="iPhone 14">iPhone 14</option>
+      <option value="iPhone 15">iPhone 15</option>
+      <option value="iPhone 16">iPhone 16</option>
+    </select>
+
+    <label for="coqueChoice">Coque choisie :</label>
+    <input type="text" id="coqueChoice" name="coqueChoice" readonly required placeholder="Choisissez une coque" />
+
+    <label for="email">Votre email :</label>
+    <input type="email" id="email" name="email" required placeholder="exemple@domaine.com" />
+
+    <button type="submit">Envoyer la commande</button>
+  </form>
+
+  <div class="contact-info">
+    <p>Contactez-moi par email : <a href="mailto:commandecoque327@gmail.com">commandecoque327@gmail.com</a></p>
+  </div>
+</main>
+
+<script>
+  const coques = document.querySelectorAll('.coque');
+  const coqueInput = document.getElementById('coqueChoice');
+
+  coques.forEach(coque => {
+    coque.addEventListener('click', () => {
+      coques.forEach(c => c.classList.remove('selected'));
+      coque.classList.add('selected');
+      coqueInput.value = coque.getAttribute('data-name');
+      const bgColor = coque.getAttribute('data-color');
+      document.body.style.backgroundColor = bgColor || '#121212';
+    });
+  });
+
+  document.getElementById('orderForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!coqueInput.value) {
+      alert("Veuillez sélectionner une coque.");
+      return;
+    }
+    alert(`Commande reçue!\n\nModèle: ${document.getElementById('phoneModel').value}\nCoque: ${coqueInput.value}\nEmail: ${document.getElementById('email').value}`);
+    e.target.reset();
+    coqueInput.value = '';
+    coques.forEach(c => c.classList.remove('selected'));
+    document.body.style.backgroundColor = '#121212';
+  });
+</script>
+
+</body>
+</html>
